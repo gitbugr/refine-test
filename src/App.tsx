@@ -20,6 +20,9 @@ import {
   OffLayoutArea,
 } from "components/layout";
 import authProvider from "./authProvider";
+import {
+  MoviesList
+} from "./pages";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -47,6 +50,7 @@ function App() {
         Layout={Layout}
         OffLayoutArea={OffLayoutArea}
         i18nProvider={i18nProvider}
+        resources={[{name: 'movies', list: MoviesList}]}
       />
     </RefineKbarProvider>
   );
